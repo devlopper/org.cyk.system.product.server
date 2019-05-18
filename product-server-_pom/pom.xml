@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.cyk.pom.jee.server</groupId>
+		<artifactId>pom-jee-server</artifactId>
+		<version>pom.jee.server.0.0.1</version>
+	</parent>
+
+	<groupId>org.cyk.system.product.server</groupId>
+	<artifactId>product-server-_pom</artifactId>
+	<version>0.0.1</version>
+	<packaging>pom</packaging>
+
+	<name>product system server</name>
+	<url>http://www.cykcorp.org</url>
+	
+	<properties>
+		<data.source.name>productServerDataSource</data.source.name>
+		<data.source.jndi.name>java:/product/server/dataSource</data.source.jndi.name>
+		<server.port.offset>0</server.port.offset>
+		<hibernate.hbm2ddl.auto>validate</hibernate.hbm2ddl.auto>
+	</properties>
+	
+	<modules>
+		<!-- Persistence Layer -->
+		<module>../product-server-persistence-entities</module>
+		<module>../product-server-persistence-api</module>
+		<module>../product-server-persistence-impl</module>
+		
+		<!-- Business Layer -->
+		<module>../product-server-business-entities</module>
+		<module>../product-server-business-api</module>
+		<module>../product-server-business-impl</module>
+		
+		<!-- Representation Layer -->
+		<module>../product-server-representation-entities</module>
+		<module>../product-server-representation-api</module>
+		<module>../product-server-representation-impl</module>
+		
+		<!-- Deployment -->
+		<module>../product-server-deployment</module>
+	</modules>
+	
+	<repositories>
+	    <repository>
+	        <id>cyk</id>
+	        <url>https://rawgit.com/devlopper/artifact.maven/master</url>
+	    </repository>
+	</repositories>
+	
+</project>
