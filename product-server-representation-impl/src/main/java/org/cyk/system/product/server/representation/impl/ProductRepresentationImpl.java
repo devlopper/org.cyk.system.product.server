@@ -2,7 +2,7 @@ package org.cyk.system.product.server.representation.impl;
 
 import java.io.Serializable;
 
-import javax.inject.Singleton;
+import javax.enterprise.context.ApplicationScoped;
 
 import org.cyk.system.product.server.business.api.ProductBusiness;
 import org.cyk.system.product.server.persistence.entities.Product;
@@ -11,7 +11,7 @@ import org.cyk.system.product.server.representation.entities.ProductDto;
 import org.cyk.system.product.server.representation.entities.ProductDtoCollection;
 import org.cyk.utility.server.representation.AbstractRepresentationEntityImpl;
 
-@Singleton
+@ApplicationScoped
 public class ProductRepresentationImpl extends AbstractRepresentationEntityImpl<Product,ProductBusiness,ProductDto,ProductDtoCollection> implements ProductRepresentation,Serializable {
 	private static final long serialVersionUID = 1L;
 

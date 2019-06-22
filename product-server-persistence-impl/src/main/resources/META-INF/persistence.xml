@@ -2,7 +2,12 @@
   
     <persistence-unit name="productPersistenceUnit" transaction-type="JTA">
     	<jta-data-source>${data.source.jndi.name}</jta-data-source>
+    	<class>org.cyk.system.product.server.persistence.entities.Input</class>
     	<class>org.cyk.system.product.server.persistence.entities.Product</class>
+    	<class>org.cyk.system.product.server.persistence.entities.ProductInput</class>
+    	<class>org.cyk.system.product.server.persistence.entities.ProductPropertyValue</class>
+    	<class>org.cyk.system.product.server.persistence.entities.Property</class>
+    	<class>org.cyk.system.product.server.persistence.entities.PropertyValue</class>
     	<exclude-unlisted-classes>true</exclude-unlisted-classes>
 		<properties>
 			<property name="hibernate.hbm2ddl.auto" value="${hibernate.hbm2ddl.auto}"/>

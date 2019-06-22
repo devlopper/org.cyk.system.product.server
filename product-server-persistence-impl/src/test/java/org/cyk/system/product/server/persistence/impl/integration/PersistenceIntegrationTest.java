@@ -10,8 +10,7 @@ public class PersistenceIntegrationTest extends AbstractPersistenceArquillianInt
 	
 	@Test
 	public void create_product() throws Exception{
-		String code = __getRandomCode__();
-		Product product = new Product().setCode(code);
+		Product product = new Product().setCode(__getRandomCode__()).setName(__getRandomName__());
 		__inject__(TestPersistenceCreate.class).addObjects(product).execute();
 	}
 	
